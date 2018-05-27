@@ -1,0 +1,14 @@
+DrawMan mg;
+Bomb b;
+void setup() {
+  mg = new DrawMan();
+  b = new Bomb(P(40, 40), P(20, -10));
+  size(400, 400);
+}
+void draw() {
+  b.update();
+  b.ads(mg);
+  mg.draw();
+  mg.flush();
+  println("test");
+}
